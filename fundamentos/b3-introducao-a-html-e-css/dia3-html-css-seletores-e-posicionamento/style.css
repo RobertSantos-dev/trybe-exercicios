@@ -1,11 +1,13 @@
-h1,p{
-  text-align: center;
+div:nth-child(3) h3{font-family:sans-serif; font-style: italic;}
+div:nth-child(4) h3{font-family:Arial;}
+div:nth-child(5) h3{color: #0400ff; font-style:italic;}
+div:nth-child(6) h3{color:white;}
+div:nth-child(7) h3{font-weight:100; font-style: italic;}
+
+div:hover{
+  border: 2px solid black;
 }
-ul,ol{list-style: none;}
-ol:hover{
-  background-color: aqua;
-}
-li:active{
-  font-family: sans-serif;
-  font-weight: 600;
-}
+div:nth-child(3){background-color: red;}
+div:nth-child(4){background-color: green;}
+div:nth-child(5){background-color: orange; height: 80px;}
+div:nth-child(6){background-color: dimgray;}
