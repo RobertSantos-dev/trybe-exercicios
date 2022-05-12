@@ -1,1 +1,2 @@
-Este repositório é voltado para os exercicios das aulas que serão aprendidos na Trybe, alem de projetos tambem. Os assuntos que serão abordados aqui neste repositórios, e no decorre do curso, são relacionados a Git e Github, Front-end(HTML, CSS, JavaScript, React), Back-end(Banco de dados, Rest, Autenticação, segurança) e Introdução a Ciência da Computação.
+# Trybe Exercicios
+ Este repositório é voltado para os exercicios das aulas que serão aprendidos na Trybe, alem de projetos tambem. Os assuntos que serão abordados aqui neste repositórios, e no decorre do curso, são relacionados a Git e Github, Front-end(HTML, CSS, JavaScript, React), Back-end(Banco de dados, Rest, Autenticação, segurança) e Introdução a Ciência da Computação.
