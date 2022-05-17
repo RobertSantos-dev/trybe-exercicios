@@ -50,6 +50,73 @@
         }
         console.log("=============================================================");
 
+
+
+        //Questão 4
+        s="";
+        var p = [1,2,3];
+
+        for(let i=0; i<n-2; i+=1){
+            for(let j=0; j<n; j+=1){
+                if(i==0){
+                    if(j==p[1]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==1){
+                    if(j==p[0]||j==p[1]||j==p[2]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==2){
+                    s+="*";
+                }
+        }
+            console.log(s);
+            s="";
+        }
+        console.log("=============================================================");
+
+
+
+        //Questão 5
+        n=7;
+        s="";
+        var p=[1,2,3,4,5];
+
+        for(let i=0; i<4; i+=1){
+            for(let j=0; j<n; j+=1){
+                if(i==0){
+                    if(j==p[2]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==1){
+                    if(j==p[1] || j==p[3]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==2){
+                    if(j==p[0] || j==p[4]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==3){s+="*"}
+
+        }
+            console.log(s); 
+            s="";
+        }
+        console.log("=============================================================");
+
+
+
+        //Questão 6
+        var valor = 20;
+        var validacao=0;
+
+        for(let j=1; j<=valor; j++){
+            if(valor%j == 0){validacao+=1;}
+        }
+        if(validacao>2){
+            console.log(`O numero ${valor} NÃO é numero Primo`);
+        }
+        else{console.log(`O numero ${valor} É numero Primo`);}
     </script>
 </body>
 </html>
