@@ -55,6 +55,32 @@
         if(valorImpar.length != 0){console.log(valorImpar);}
         else{console.log("Nenhum valor ímpar encontrado")}
         console.log("========================================================================================");
+
+
+        //Questão 7
+        var menorValor=maiorValor;
+        for(let i of numbers){
+            if(i<menorValor){menorValor=i;}
+        }
+
+        console.log(menorValor);
+        console.log("========================================================================================");
+
+
+        // Questão 8
+        var contagem = []
+        for(let i=1; i<26; i+=1)contagem.push(i);
+
+        console.log(contagem);
+        console.log("========================================================================================");
+
+
+        //Questão 9
+        var divisaoContagem=[];
+        for(let i of contagem)divisaoContagem.push(i/2);
+
+        console.log(divisaoContagem);
+        console.log("========================================================================================");
     </script>
 </body>
 </html>
