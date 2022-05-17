@@ -29,6 +29,32 @@
         console.log(media);
         console.log("========================================================================================");
 
+
+        //Questão 4
+        if(media>20){console.log(`${media} - O valor da media é maior que 20`);}
+        else{console.log("O valor da media é menor que 20");}
+        console.log("========================================================================================");
+
+
+        //Questão 5
+        var maiorValor=0;
+        for(let i of numbers){
+            if(i>maiorValor){maiorValor=i;}
+        }
+
+        console.log(maiorValor);
+        console.log("========================================================================================");
+
+        
+        //Questão 6
+        var valorImpar=[];
+        for(let i of numbers){
+            if(i%2==1){valorImpar.push(i);}
+        }
+
+        if(valorImpar.length != 0){console.log(valorImpar);}
+        else{console.log("Nenhum valor ímpar encontrado")}
+        console.log("========================================================================================");
     </script>
 </body>
 </html>
