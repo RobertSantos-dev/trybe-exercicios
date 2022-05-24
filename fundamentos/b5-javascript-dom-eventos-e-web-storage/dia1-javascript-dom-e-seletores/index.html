@@ -67,10 +67,37 @@
         var mudaCor = (elemento, cor) =>{
             elemento.style.backgroundColor = cor;
         }
-        
+        var corrija = ( elemento, palavraAtual, palavraCorrigida)=>{
+            let palavras = elemento.innerText.split(" ");
+            let selecao = palavras.filter((p)=>p.toLocaleLowerCase().includes(palavraAtual.toLocaleLowerCase()));
+            let correcao = palavraCorrigida;
+            elemento.innerText="";
+
+            for(let i in palavras){
+                if(palavras[i]===selecao[0]){palavras[i]=correcao;}
+            }
+
+            for(let i in palavras){
+                elemento.innerText+=` ${palavras[i]}`;
+            }
+        }
+        var tudoMaiusculo = (elemento)=>{
+            for(let i=0; i<elemento.length; i+=1){
+                elemento[i].style.textTransform = "uppercase";
+        }}
+
+        var todoConteudo = (c)=>{
+            for(let i=0; i<c.length; i+=1){
+                console.log(c[i].innerText);
+            }
+        }
 
         mudaP(p[1], "Rico e estudando para não ficar preguiçoso");
         mudaCor(main, "rgb(76,164,109)");
+        mudaCor(secao, "white");
+        corrija(t1[0], "java", "JavaScript");
+        tudoMaiusculo(p);
+        todoConteudo(p);
     </script>
   </body>
 </html>
