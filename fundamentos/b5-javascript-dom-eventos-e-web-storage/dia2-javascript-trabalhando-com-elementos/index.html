@@ -103,9 +103,25 @@
         }
 
     // Questão 9
-    for (let i=0; i<3; i+=1){
+        for (let i=0; i<3; i+=1){
             elementCreate(main, "h3", "", "");
         }
+
+    // Extra
+        var addClass = (element, pos, elementClass)=>{
+            document.querySelectorAll(element)[pos].className = elementClass;
+        }
+    
+        // Questão 1
+            addClass("h1", 0, "title");
+
+        // Questão 2
+            for(let i=0; i<3; i+=1){
+                addClass("h3", i, "description");
+            }
+        
+        // Questão 3
+            main.removeChild(secaoLeft);
     </script>
   </body>
 </html>
