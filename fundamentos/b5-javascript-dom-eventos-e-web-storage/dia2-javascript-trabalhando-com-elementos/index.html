@@ -85,6 +85,22 @@
 
     // Questão 6
         elementCreate(main, "section", "", "right-content");
+
+    // Questão 7
+        var secaoLeft = document.querySelector(".left-content");
+        elementCreate(secaoLeft, "img", "", "small-image");
+        var imagem = document.querySelector(".small-image");
+        imagem.src="https://picsum.photos/200";
+    
+    // Questão 8
+        var secaoRight = document.querySelector(".right-content");
+        elementCreate(secaoRight, "ul", "", "");
+        var item = ["um","dois","três","quatro","cinco","seis","sete","oito","nove","dez"]
+        var lista = secaoRight.querySelector("ul");
+
+        for (let i of item) {
+            elementCreate(lista, "li", i, "");
+        }
     </script>
   </body>
 </html>
