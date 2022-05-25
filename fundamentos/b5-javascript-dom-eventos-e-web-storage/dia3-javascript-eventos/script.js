@@ -15,13 +15,15 @@ function createDaysOfTheWeek() {
   
         const ulDays = document.getElementById("days")
         const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+        const myTasks = document.querySelector(".my-tasks");
         const btns = document.querySelector(".buttons-container");
 
-        var daysCalendar = (elementPai, elementCreate, elementClass, elementId, elementHtml)=>{
+        var daysCalendar = (elementPai, elementCreate, elementClass, elementId, elementHtml, elementBack)=>{
             let item = document.createElement(elementCreate);
             item.className = elementClass;
             item.id = elementId
             item.innerHTML = elementHtml;
+            item.style.backgroundColor = elementBack;
 
             elementPai.appendChild(item);
         }
@@ -29,16 +31,16 @@ function createDaysOfTheWeek() {
     // Questa 1
         for(let i in dezDaysList){
             if(dezDaysList[i] === 25){
-                daysCalendar(ulDays, "li", "days holiday friday", "", dezDaysList[i])
+                daysCalendar(ulDays, "li", "days holiday friday", "", dezDaysList[i], "")
             }
             else if(dezDaysList[i] === 24 || dezDaysList[i] === 31){
-                daysCalendar(ulDays, "li", "days holiday", "", dezDaysList[i])
+                daysCalendar(ulDays, "li", "days holiday", "", dezDaysList[i], "")
             }
             else if(dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18){
-                daysCalendar(ulDays, "li", "days friday", "", dezDaysList[i])
+                daysCalendar(ulDays, "li", "days friday", "", dezDaysList[i], "")
             }
             else{
-            daysCalendar(ulDays, "li", "days", "", dezDaysList[i])
+            daysCalendar(ulDays, "li", "days", "", dezDaysList[i], "")
         }}
 
     // Questão 2
@@ -63,7 +65,7 @@ function createDaysOfTheWeek() {
         })
 
     //Questão 4
-    daysCalendar(btns, "button", "", "btn-friday", "Sexta-feira");
+    daysCalendar(btns, "button", "", "btn-friday", "Sexta-feira", "");
 
     //Questão 5
         var btn2 = document.getElementById("btn-friday");
@@ -86,3 +88,27 @@ function createDaysOfTheWeek() {
                     daysFriday[i].innerHTML = diasSexta[i];
             }}
         })
+
+    // Questão 6
+        var dias = document.querySelectorAll("li.days");
+
+        var focoZoom = (e)=>{
+            if(e.target.style.fontSize==="20px" || e.target.style.fontSize===""){
+                e.target.style.fontSize="25px";
+            }
+            else if(e.target.style.fontSize==="25px"){
+                e.target.style.fontSize="20px";
+            }
+        }
+
+        for(let i=0; i<dias.length; i+=1){
+            dias[i].addEventListener("mouseover", focoZoom);
+            dias[i].addEventListener("mouseout", focoZoom);
+        }
+
+    // Questão 7
+        daysCalendar(myTasks, "span", "", "", "Praticar", "");
+
+    // Questão 8
+        daysCalendar(myTasks, "div", "", "task", "", "green");
+        
