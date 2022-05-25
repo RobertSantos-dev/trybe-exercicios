@@ -110,5 +110,38 @@ function createDaysOfTheWeek() {
         daysCalendar(myTasks, "span", "", "", "Praticar", "");
 
     // Questão 8
-        daysCalendar(myTasks, "div", "", "task", "", "green");
+        daysCalendar(myTasks, "div", "", "task", "", "black");
+
+    // Questão 9
+        var task = document.querySelector(".my-tasks #task");
+        let t = 0;
+
+        task.addEventListener("click", ()=>{
+            if(t===0){
+                t=1;
+                task.className="task selected";
+            }
+            else if(t===1){
+                t=0
+                task.className="task";
+                for(let i=0; i<dias.length; i+=1){
+                    dias[i].style.color="";
+                }
+            }
+        })
         
+    // Questão 10
+    let seleciona=0;
+
+    var selecionado = (e)=>{
+        if(t===1){
+            if(e.target.style.color === ""){
+                e.target.style.color = "black";
+                
+            }else{
+                e.target.style.color = "";
+        }}}
+
+    for(let i=0; i<dias.length; i+=1){
+        dias[i].addEventListener("click", selecionado)
+    }
