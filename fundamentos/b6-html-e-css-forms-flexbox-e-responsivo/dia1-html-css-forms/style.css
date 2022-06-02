@@ -1,0 +1,48 @@
+header{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+main{
+    width: 90%;
+    margin: auto;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset{
+    width:650px;
+}
+#user-name-id, #user-email-id{
+    width: 100%;
+    display: block;
+    font-size: 15pt;
+}
+
+textarea{
+    font-size: 15pt;
+    resize: none;
+}
+
+main form div{
+    margin: 40px auto;
+}
+
+button{
+    font-size: 18px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: white;
+    border: 2px solid #575757;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    background-color: #575757;
+    color: white;
+    border: 2px solid black;
+}
