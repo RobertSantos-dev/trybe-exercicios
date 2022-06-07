@@ -47,3 +47,21 @@
   figcaption {
     font-size: .8;
   }
+
+
+  @media screen and (min-width:620px){
+    body{
+        background-color: #ddfdfd;
+        font-size: 19.5px;
+        font-family:Arial, Helvetica, sans-serif;
+        margin: 20px;
+    }
+    figure{
+        max-width: 49%;
+        margin: 2px;
+    }
+    main section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
