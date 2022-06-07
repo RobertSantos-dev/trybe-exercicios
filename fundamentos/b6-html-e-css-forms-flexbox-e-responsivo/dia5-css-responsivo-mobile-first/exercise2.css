@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+  }
+
+  hr{
+      width: 50%;
+      margin: 50px auto;
+  }
+
+  body{
+      padding: 0px 5px;
+  }
+  ul{
+    list-style: none;
+  }
+  header{
+    width: 100%;
+    background-color: #a72d42;
+    color: white;
+    margin-bottom: 20px;
+    
+  }
+  header nav{
+    width: 100%;
+  }
+  h2{
+    text-align: center;
+  }
+  .main-content{
+      margin: auto;
+      padding: 5px;
+  }
+  p{
+      text-align: justify;
+      text-indent: 50px;
+      margin: 15px auto;
+      font-size: 18px;
+  }
+  footer{
+      width: 100%;
+      text-align: center;
+      background-color: #777777;
+      padding: 2px;
+  }
+  footer p{
+    text-align: center;
+  }
+
+  @media screen and (min-width:200px){
+      h1{
+         font-size: 31px;
+         text-align: center;
+      }
+      header nav ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      aside{
+        max-width: 90%;
+        
+        padding: auto;
+        margin: auto auto 10px auto;
+      }
+      aside h2{
+          margin-bottom: 10px;
+      }
+      
+  }
+
+  @media screen and (min-width:720px){
+    aside ul{
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 120px;
+        justify-content: center;
+      }
+      aside ul li{
+          margin: 0px;
+      }
+      
+  }
+
+  @media screen and (min-width:1023px){
+      
+  }
