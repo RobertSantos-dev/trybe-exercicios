@@ -18,6 +18,7 @@ const lesson3 = {
     turno: 'noite',
   };
 
+// Questões 1, 2, 3 e 4
 const addObj = (obj, ch, val) => obj[ch] = val;
 const listObj = (obj) => Object.keys(obj);
 const tamObj = (obj) => Object.entries(obj).length;
