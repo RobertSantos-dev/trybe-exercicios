@@ -59,3 +59,17 @@ const retornaCh = (obj, ch) => {
 }
 console.log("----------- 7 ------------");
 console.log(retornaCh(lesson1, 0));
+
+// Questão 8
+const verObj = (obj, ch, val) => {
+    let res = false
+    for (let i = 0; i < Object.values(obj).length; i += 1) {
+        if (Object.keys(obj)[i] === ch && Object.values(obj)[i] === val){
+            res = true;
+        }
+    }
+    return res;
+}
+console.log("----------- 8 ------------");
+console.log(verObj(lesson3, 'turno', 'noite'));
+console.log(verObj(lesson3, 'materia', 'Maria Clara'));
