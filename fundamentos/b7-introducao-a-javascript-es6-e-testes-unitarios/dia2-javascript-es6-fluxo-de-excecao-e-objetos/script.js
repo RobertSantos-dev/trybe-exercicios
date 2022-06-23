@@ -30,7 +30,7 @@ const order = {
       }
     },
     payment: {
-      total: 60,
+      total: 50,
     },
   };
   
@@ -42,7 +42,9 @@ const order = {
   console.log(customerInfo(order));
 
   const orderModifier = (order) => {
-    // Adicione abaixo as informações necessárias.
-  }
+    let or = Object.values(order);
+    // Olá Luiz Silva, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00.
+    return `Olá Robert Santos, o total do seu pedido de ${Object.keys(or[3].pizza)[0]}, ${Object.keys(or[3].pizza)[1]} e ${or[3].drinks.coke.type} é R$ ${or[4].total},00`;
+}
   
-  orderModifier(order);
+  console.log(orderModifier(order));
