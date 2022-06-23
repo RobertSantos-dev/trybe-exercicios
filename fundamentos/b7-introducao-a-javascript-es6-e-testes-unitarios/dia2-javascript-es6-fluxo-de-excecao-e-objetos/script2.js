@@ -25,15 +25,37 @@ const valObj = (obj) => Object.values(obj);
 
 addObj(lesson2,'turno','noite');
 
+console.log("----------- 1 ------------");
 console.log(lesson2);
-console.log("-----------------------");
+console.log("------------ 2 -----------");
 console.log(listObj(lesson3));
-console.log("-----------------------");
+console.log("------------ 3 -----------");
 console.log(tamObj(lesson1));
-console.log("-----------------------");
+console.log("------------ 4 -----------");
 console.log(valObj(lesson2));
 
+//Questão 5
 const allLessons = {};
 Object.assign(allLessons, {lesson1, lesson2, lesson3});
 
+console.log("------------ 5 -----------");
 console.log(allLessons);
+
+// Questão 6
+const totEstudantes = (obj, ch) => {
+    let res = [];
+    for (let i = 0; i < Object.values(obj).length; i += 1) {
+        res.push(Object.values(obj)[i][ch]);
+    }
+    return res;
+}
+console.log("----------- 6 ------------");
+console.log(totEstudantes(allLessons, 'numeroEstudantes'));
+
+// Questão 7
+const retornaCh = (obj, ch) => {
+    let res = Object.values(obj)[ch];
+    return res;
+}
+console.log("----------- 7 ------------");
+console.log(retornaCh(lesson1, 0));
