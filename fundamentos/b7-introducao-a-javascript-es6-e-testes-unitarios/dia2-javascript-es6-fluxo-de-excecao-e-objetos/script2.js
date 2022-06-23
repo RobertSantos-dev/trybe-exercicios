@@ -20,3 +20,5 @@ const lesson3 = {
 
 const addObj = (obj, ch, val) => obj[ch] = val;
 const listObj = (obj) => Object.keys(obj);
+const tamObj = (obj) => Object.entries(obj);
+const valObj = (obj) => Object.values(obj);
