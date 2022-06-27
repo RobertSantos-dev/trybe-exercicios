@@ -61,8 +61,10 @@ const books = [
     },
 ];
 
-const novoArr = (arr) => {
-   return arr.map(element => `${element.name} - ${element.genre} - ${element.author.name}`)
+const exercicio2 = (arr) => {
+    return arr.map((element) => {
+        return {age: element.releaseYear - element.author.birthYear, author:element.author.name}
+    }).sort((a,b)=>a.age>b.age?1:-1);
 }
 
-console.log(novoArr(books));
+console.log(exercicio2(books));
