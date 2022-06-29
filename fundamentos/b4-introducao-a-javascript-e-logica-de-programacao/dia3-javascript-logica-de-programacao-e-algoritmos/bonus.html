@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio/bonus trybe</title>
+</head>
+<body>
+    <script>
+        var n=5;
+        var s="";
+
+
+
+        // Questão 1
+        for(let i=0; i<n; i++){
+            s="";
+            for(let j=0; j<n; j++){
+                s+="*";
+            }
+            console.log(s);
+        }
+        console.log("=============================================================");
+
+
+
+        //Questão 2
+        s="";
+        for(let i=0; i<n; i++){
+            s+="*";
+            console.log(s);
+        }
+        console.log("=============================================================");
+
+
+
+        //Questão 3
+        s="";
+        var s2=n-1;
+
+        for(let i=0; i<n; i+=1){
+            s="";
+                for(let j=0; j<n; j+=1){
+                    if(s2<=j){s+="*";}
+                    else{s+=" ";}
+                }
+            s2-=1;
+            console.log(s);
+        }
+        console.log("=============================================================");
+
+
+
+        //Questão 4
+        s="";
+        var p = [1,2,3];
+
+        for(let i=0; i<n-2; i+=1){
+            for(let j=0; j<n; j+=1){
+                if(i==0){
+                    if(j==p[1]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==1){
+                    if(j==p[0]||j==p[1]||j==p[2]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==2){
+                    s+="*";
+                }
+        }
+            console.log(s);
+            s="";
+        }
+        console.log("=============================================================");
+
+
+
+        //Questão 5
+        n=7;
+        s="";
+        var p=[1,2,3,4,5];
+
+        for(let i=0; i<4; i+=1){
+            for(let j=0; j<n; j+=1){
+                if(i==0){
+                    if(j==p[2]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==1){
+                    if(j==p[1] || j==p[3]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==2){
+                    if(j==p[0] || j==p[4]){s+="*";}
+                    else{s+=" ";}
+                }
+                else if(i==3){s+="*"}
+
+        }
+            console.log(s); 
+            s="";
+        }
+        console.log("=============================================================");
+
+
+
+        //Questão 6
+        var valor = 20;
+        var validacao=0;
+
+        for(let j=1; j<=valor; j++){
+            if(valor%j == 0){validacao+=1;}
+        }
+        if(validacao>2){
+            console.log(`O numero ${valor} NÃO é numero Primo`);
+        }
+        else{console.log(`O numero ${valor} É numero Primo`);}
+    </script>
+</body>
+</html>

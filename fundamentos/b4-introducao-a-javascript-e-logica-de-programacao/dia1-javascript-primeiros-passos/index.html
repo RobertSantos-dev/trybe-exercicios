@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JavaScript</title>
+</head>
+<body>
+    <script>
+        //Questão 1
+        const a=4;
+        const b=2;
+
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+        console.log("===============================================================");
+
+
+        //Questão 2
+        const a2=8;
+        const b2=7;
+
+        if(a2>b2){console.log(a2);}
+        else{console.log(b2);}
+        console.log("===============================================================");
+
+
+        //Questão 3
+        const a3=3;
+        const b3=6;
+        const c3=2;
+
+        if(a3>b3 && a3>c3){console.log(a3)}
+        else if(b3>a3 && b3>c3){console.log(b3);}
+        else if(c3>a3 && c3>b3){console.log(c3);}
+        else{console.log("Verifique se todos os valores são diferentes?");}
+        console.log("===============================================================");
+
+
+        //Questão 4
+        const a4=0;
+        
+        if(a4>0){console.log("Positive");}
+        else if(a4<0){console.log("Negative");}
+        else{console.log(0);}
+        console.log("===============================================================");
+
+
+        //Questão 5
+        const a5=30;
+        const b5=60;
+        const c5=90;
+
+        if(a5+b5+c5 == 180){console.log(true);}
+        else{console.log(false);}
+        console.log("===============================================================");
+
+
+        //Questão 6
+        var peca="BispO".toLowerCase();
+
+        if(peca == "rei"){
+            console.log("Rei mover-se nas direções horizontal, vertical e diagonal somente uma casa por vez");
+        }
+        else if(peca == "rainha"){
+            console.log("Rainha mover-se nas direções horizontal, vertical e diagonal sem pular as peças");
+        }
+        else if(peca == "cavalo"){
+            console.log("Cavalo, é a unica peça que pode se movimentar pulando sobre outra peça");
+        }
+        else if(peca == "bispo"){
+            console.log("Bispo mover-se somente na direção diagonal sem pular as peças");
+        }
+        else if(peca == "torre"){
+            console.log("Torre mover-se nas direções horizontal e vertical sem pular as peças");
+        }
+        else if(peca == "peao"){
+            console.log("Peão mover-se somente para frente, porem se tiver que tomar uma peça o Peão pode mover-se a uma casa da diagonal a qual vai esta a outra peça. Lembre-se, no primeiro movimento o Peão pode avançar 2 casas a frente depois somente uma por vez e sem pular as peças.");
+        }
+        else{console.log("Peça invalida.")}
+        console.log("===============================================================");
+
+
+        //Questão 7
+        var porcentagem=77;
+        if(porcentagem >= 90){console.log("A");}
+        else if(porcentagem >= 80){console.log("B");}
+        else if(porcentagem >= 70){console.log("C");}
+        else if(porcentagem >= 60){console.log("D");}
+        else if(porcentagem >= 50){console.log("E");}
+        else if(porcentagem < 50){console.log("F");}
+        else if(porcentagem>100 || porcentagem<0){
+            console.log("Valor invalido");
+        }
+        console.log("===============================================================");
+
+
+        //Questão 8
+        const par=110;
+
+        if(par%2==0){console.log(true);}
+        else{console.log(false);}
+        console.log("===============================================================");
+    
+    
+        //Questão 9
+        const impar=7;
+
+        if(impar%2==1){console.log(true);}
+        else{console.log(false);}
+        console.log("===============================================================");
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const bd = document.querySelector("body");
+
+      var elementCreate = (elementPai, elementNew, valorElementNew, classElement)=>{
+            let elem = document.createElement(elementNew);
+            elem.innerText = valorElementNew;
+            elem.className = classElement;
+            elementPai.appendChild(elem);
+      }
+
+    // Questão 1
+        elementCreate(bd, "h1", "Exercício 5.2 - JavaScript DOM", "");
+
+    // Questão 2
+        elementCreate(bd, "main", "", "main-content");
+
+    // Questão 3
+        var main = document.querySelector(".main-content");
+        elementCreate(main, "section", "", "center-content");
+
+    // Questão 4
+        var secao = document.querySelector(".center-content");
+        elementCreate(secao, "p", "Meu Nome é Robert hahaha","");
+    
+    // Questão 5
+        elementCreate(main, "section", "", "left-content");
+
+    // Questão 6
+        elementCreate(main, "section", "", "right-content");
+
+    // Questão 7
+        var secaoLeft = document.querySelector(".left-content");
+        elementCreate(secaoLeft, "img", "", "small-image");
+        var imagem = document.querySelector(".small-image");
+        imagem.src="https://picsum.photos/200";
+    
+    // Questão 8
+        var secaoRight = document.querySelector(".right-content");
+        elementCreate(secaoRight, "ul", "", "");
+        var item = ["um","dois","três","quatro","cinco","seis","sete","oito","nove","dez"]
+        var lista = secaoRight.querySelector("ul");
+
+        for (let i of item) {
+            elementCreate(lista, "li", i, "");
+        }
+
+    // Questão 9
+        for (let i=0; i<3; i+=1){
+            elementCreate(main, "h3", "", "");
+        }
+
+    // Extra
+        var addClass = (element, pos, elementClass)=>{
+            document.querySelectorAll(element)[pos].className = elementClass;
+        }
+    
+        // Questão 1
+            addClass("h1", 0, "title");
+
+        // Questão 2
+            for(let i=0; i<3; i+=1){
+                addClass("h3", i, "description");
+            }
+        
+        // Questão 3
+            main.removeChild(secaoLeft);
+        
+        // Questão 4
+            secaoRight.style.marginRight = "auto";
+        
+        // Questão 5
+            secao.parentElement.style.backgroundColor = "green";
+        
+        // Questão 6
+            lista.children[9].remove();
+            lista.children[8].remove();
+    </script>
+  </body>
+</html>
