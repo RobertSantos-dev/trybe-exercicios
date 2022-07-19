@@ -1,8 +1,17 @@
 .App {
   background-color: rgb(247, 89, 89);
   padding: 0 15px;
+  height: 550px;
 }
 
 h1 {
   text-align: center;
+}
+
+.divisor {
+  height: 2px;
+  width: 90%;
+  margin: auto;
+  background-color: black;
+  border: none;
 }

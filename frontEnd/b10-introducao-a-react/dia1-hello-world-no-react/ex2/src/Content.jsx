@@ -26,18 +26,18 @@ const conteudos = [
 class Content extends React.Component {
     render() {
         return(
-            <section>
-                {conteudos.map((e, i) => {
-                    return (
-                        <div key={i}>
-                            <p>O <strong>{Object.keys(e)[0]}</strong> é: {e.conteudo}</p>
-                            <p><strong>{Object.keys(e)[1]}</strong>: {e.status}`</p>
-                            <p><strong>{Object.keys(e)[2]}</strong>: {e.bloco}`</p>
-                            <hr />
-                        </div>
-                    )
-                })}
-            </section>
+          <section>
+            {conteudos.map((e, i) => {
+              return (
+                <div key={i}>
+                    <p>O <strong>{Object.keys(e)[0]}</strong> é: <em>{e.conteudo}</em></p>
+                    <p><strong>{Object.keys(e)[1]}</strong>: <em>{e.status}</em></p>
+                    <p><strong>{Object.keys(e)[2]}</strong>: <em>{e.bloco}</em></p>
+                    <hr className='divisor'/>
+                </div>
+              )
+            })}
+          </section>
         )
     }
 }
