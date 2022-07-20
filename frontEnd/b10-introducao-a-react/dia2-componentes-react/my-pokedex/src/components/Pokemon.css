@@ -1,0 +1,48 @@
+.item, .list {
+    display: flex;
+}
+
+.item {
+    flex-direction: column;
+    height: 200px;
+    box-shadow: 0 0 3px black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    flex-basis: 250px;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
+.item-filhos img {
+    width: 120px;
+}
+
+.item-filhos p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.item, .item-filhos img {
+    transition: 0.3s ease;
+}
+
+.list {
+    margin: auto;
+    max-width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+.item:hover .item-filhos img {
+    width: 130px;
+    transform: rotate(360deg);
+}
