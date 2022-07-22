@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.btn-selecao {
+  background-color: rgba(75, 75, 75, 0.405);
+  border-radius: 5px;
+  margin: 0 15px;
+}
+
+.btn-proximo {
+  background-color: tomato;
+  border-radius: 20px;
+}
+
+.btn-proximo, .btn-selecao {
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+}
