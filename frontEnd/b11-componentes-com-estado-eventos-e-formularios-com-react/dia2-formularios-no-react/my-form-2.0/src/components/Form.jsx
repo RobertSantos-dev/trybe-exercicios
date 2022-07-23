@@ -50,10 +50,12 @@ class Form extends React.Component {
             this.setState({ [name]: value, });
     }
 
+    eventSubmit = () => alert('muito bem você concluiu, em breve estaremos entrando em contato');
+
     render() {
         const { nome, email, cpf, endereco, cidade } = this.state;
         return (
-            <form onSubmit="">
+            <form onSubmit={ this.eventSubmit }>
                 <fieldset>
                     <legend>Dados Pessoais: </legend>
                     <Inputs
@@ -106,7 +108,7 @@ class Form extends React.Component {
                     <TextArea texto="Descrição do cargo" name="descricao-cargo" max="500" />
                 </fieldset>
                 <div>
-                    <button type="button" onClick={() => console.log(this.state)}>Finalizar</button>
+                    <button type="submit">Finalizar</button>
                     <button type="reset">Limpar</button>
                 </div>
             </form>
